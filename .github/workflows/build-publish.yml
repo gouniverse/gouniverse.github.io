@@ -9,13 +9,26 @@ on:
 
 jobs:
   build-site:
-    runs-on: eagledata/jigsaw-docker:latest
+    #runs-on: eagledata/jigsaw-docker:latest
+    #steps:
+    #- uses: actions/checkout@v2
+    #- name: Build website
+    #  run: jigsaw build production
+    #- name: Move to public directory
+    #  run: mv build_production/ public/
+      
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build website
-      run: jigsaw build production
-    - name: Move to public directory
-      run: mv build_production/ public/
+      - uses: actions/checkout@v2
+      - name: Install Composer Dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      - name: Install NPM Dependencies
+        run: npm install
+      - name: Build Site
+        run: npm run production
+      - name: Stage Files
+        run: git add -f build_production
+      - name: Commit files
       
     #- name: Stage Files
     #  run: git add -f build_production
