@@ -28,7 +28,6 @@ jobs:
         run: npm run production
       - name: Stage Files
         run: git add -f build_production
-      - name: Commit files
       
     #- name: Stage Files
     #  run: git add -f build_production
