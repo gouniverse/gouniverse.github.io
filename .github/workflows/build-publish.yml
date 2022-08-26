@@ -31,13 +31,13 @@ jobs:
       #- name: Stage Files
       #  run: git add -f build_production
       
-    #- name: Stage Files
-    #  run: git add -f build_production
-    #- name: Commit files
-    #  run: |
-    #    git config --local user.email "actions@github.com"
-    #    git config --local user.name "GitHub Actions"
-    #    git commit -m "Build for deploy"
+      - name: Stage Files
+        run: git add -f build_production
+      - name: Commit files
+        run: |
+         git config --local user.email "actions@github.com"
+         git config --local user.name "GitHub Actions"
+         git commit -m "Build for deploy"
     #- name: Publish
     #  run: |
     #    git subtree split --prefix build_production -b master
