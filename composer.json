@@ -5,9 +5,9 @@
     "license": "private",
     "authors": [
         {
-            "name": "Anthony Terrell",
-            "email": "anthony@tighten.co"
-        },
+            "name": "Milan Lesichkov",
+            "email": "lesichkov@abv.bg"
+        }
     ],
     "require": {
         "samdark/sitemap": "^2.2.1",
