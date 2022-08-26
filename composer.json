@@ -1,0 +1,21 @@
+{
+    "name": "gouniverse/gouniverse.github.io",
+    "description": "",
+    "keywords": [""],
+    "license": "private",
+    "authors": [
+        {
+            "name": "Anthony Terrell",
+            "email": "anthony@tighten.co"
+        },
+    ],
+    "require": {
+        "samdark/sitemap": "^2.2.1",
+        "tightenco/jigsaw": "^1.3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Listeners\\": "listeners/"
+        }
+    }
+}
